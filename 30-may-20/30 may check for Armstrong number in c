@@ -48,4 +48,5 @@ int power(int n, int r) {
   for (c = 1; c <= r; c++)
     p = p*n;
 
-  return 
+  return 0
+  }
