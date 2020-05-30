@@ -23,6 +23,7 @@ int check_armstrong(int n) {
 
   t = n;
 
+
   while (t != 0) {
     digits++;
     t = t/10;
