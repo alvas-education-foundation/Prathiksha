@@ -1,0 +1,63 @@
+#include <conio.h>
+#include <stdio.h>
+count(int *a,int *b,int n)
+{
+int i,c,j;
+for(i=0; i<n; i++)
+{
+c=1;
+if(a[i]!=-1)
+{
+for(j=i+1; j<n; j++)
+{
+if(a[i]==a[j])
+{
+c++;
+a[j]=-1;
+}
+}
+b[i]=c;
+}
+}
+}
+print(int *a,int *b,int n)
+{
+int i;
+for(i=0; i<n; i++)
+{
+if(a[i]!=-1)
+{
+printf("no of %d is %d \n",a[i],b[i]);
+}
+}
+}
+int main()
+{
+int a[10000],b[10000],i,n;
+printf("Enter size of the array : ");
+scanf("%d", &n);
+printf("Enter elements in array : ");
+for(i=0; i<n; i++)
+{
+scanf("%d",&a[i]);
+}
+count(a,b,n);
+print(a,b,n);
+return 0;
+}
+Output:
+Enter size of the array: 10
+Enter elements in array: 1
+2
+3
+4
+4
+3
+2
+1
+1
+4
+no of 1 is 3
+no of 2 is 2
+no of 3 is 2
+no of 4 is 3
