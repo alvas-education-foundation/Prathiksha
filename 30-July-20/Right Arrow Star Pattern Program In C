@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+int i,j,n;
+char ch;
+printf("Enter number of rows: ");
+scanf("%d%c",&n,&ch);
+printf("Enter the symbol: ");
+ch=getchar();
+i=0;
+do
+{
+j=0;
+do
+{
+if(j<i)
+printf(" ");
+else
+printf("%c",ch);
+j++;
+}while(j<n);
+printf("\n");
+i++;
+}while(i<n);
+i=2;
+do
+{
+j=0;
+do
+{
+if(j<n-i)
+printf(" ");
+else
+printf("%c",ch);
+j++;
+}while(j<n);
+printf("\n");
+i++;
+}while(i<=n);
+return 0;
+}
