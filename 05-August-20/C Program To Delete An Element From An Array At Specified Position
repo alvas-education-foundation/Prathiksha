@@ -1,0 +1,14 @@
+#include<stdio.h> 
+#include <conio.h> 
+print(int a[],int n) { 
+int i; for(i=0; i<n; i++) {
+printf("%d ",a[i]); } } int main() { int a[10000],i,n,index,new1;
+printf("Enter size of the array : "); scanf("%d", &n); printf("Enter elements in array : "); for(i=0; i<n; i++) { 
+scanf("%d",&a[i]); } printf("Enter position should not greater than %d:",n); scanf("%d",&index); if(index<=n && index>0) {
+printf("\nbefore deletion :"); print(a,n); for(i=index-1; i<n-1; i++) { a[i]=a[i+1]; } printf("\nafter deletion :"); print(a,n-1); } else
+printf("\ninvalid input"); return 0; } 
+
+Output: 
+Enter size of the array: 5 
+Enter elements in array: 5 1 20 0 1
+Enter position should not greater than 5:3 before deletion :5 1 20 0 1 after deletion :5 1 0 1
